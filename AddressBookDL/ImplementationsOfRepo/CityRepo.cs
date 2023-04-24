@@ -3,9 +3,9 @@ using AddressBookEL.Entities;
 
 namespace AddressBookDL.ImplementationsOfRepo
 {
-    public class CityRepository : Repository<City,int>, ICityRepository
+    public class CityRepo : Repository<City,int>, ICityRepo
     {
-        public CityRepository(MyContext context) : base(context)
+        public CityRepo(MyContext context) : base(context)
         {
             
         }

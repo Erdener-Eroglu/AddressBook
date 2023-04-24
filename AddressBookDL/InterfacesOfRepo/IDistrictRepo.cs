@@ -2,7 +2,7 @@
 
 namespace AddressBookDL.InterfacesOfRepo
 {
-    public interface INeighbourhoodRepository:IRepository<Neighbourhood,int>
+    public interface IDistrictRepo : IRepository<District, int>
     {
     }
 }

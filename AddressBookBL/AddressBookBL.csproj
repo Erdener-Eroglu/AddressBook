@@ -23,4 +23,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AddressBookDL\AddressBookDL.csproj" />
+    <ProjectReference Include="..\AddressBookEL\AddressBookEL.csproj" />
+  </ItemGroup>
+
 </Project>
