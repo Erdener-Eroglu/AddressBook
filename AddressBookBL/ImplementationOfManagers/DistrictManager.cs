@@ -6,7 +6,7 @@ using AutoMapper;
 
 namespace AddressBookBL.ImplementationOfManagers
 {
-    internal class DistrictManager : Manager<DistrictVM,District,int>, IDistrictManager
+    public class DistrictManager : Manager<DistrictVM,District,int>, IDistrictManager
     {
         public DistrictManager(IDistrictRepo repo, IMapper mapper) : base(repo, mapper, null)
         {
