@@ -1,11 +1,17 @@
-﻿using AddressBookEL.IdentityModels;
-using System.ComponentModel.DataAnnotations;
+﻿using AddressBookEL.Models;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using AddressBookEL.IdentityModels;
 
-namespace AddressBookEL.Models
+namespace AddressBookEL.ViewModels
 {
-    public class UserAddress : BaseNumeric
+    public class UserAddressVM
     {
+        public int Id { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+        public bool IsRemoved { get; set; }
+
         [Required]
         [StringLength(50, MinimumLength = 2)]
         public string Title { get; set; }
@@ -14,16 +20,13 @@ namespace AddressBookEL.Models
         [StringLength(100, MinimumLength = 10)]
         public string Details { get; set; }
 
-        public string UserId { get; set; } //FK
+        public string UserId { get; set; }
 
         public int NeighbourhoodId { get; set; }
 
         public bool isDefaultAddress { get; set; }
-
-        [ForeignKey("NeighbourhoodId")]
-        public virtual Neighbourhood Neighbourhood { get; set; }
-
-        [ForeignKey("UserId")]
+        public virtual NeighbourhoodVM Neighbourhood { get; set; }
         public virtual AppUser AppUser { get; set; }
+
     }
 }
