@@ -1,6 +1,4 @@
-﻿using AddressBookEL.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using AddressBookEL.IdentityModels;
 
 namespace AddressBookEL.ViewModels
@@ -25,8 +23,8 @@ namespace AddressBookEL.ViewModels
         public int NeighbourhoodId { get; set; }
 
         public bool isDefaultAddress { get; set; }
-        public virtual NeighbourhoodVM Neighbourhood { get; set; }
-        public virtual AppUser AppUser { get; set; }
+        public NeighbourhoodVM Neighbourhood { get; set; }
+        public AppUser AppUser { get; set; }
 
     }
 }
