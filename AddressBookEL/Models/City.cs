@@ -1,8 +1,10 @@
 ﻿using AddressBookEL.Models;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AddressBookEL.Entities
 {
+    [Table("Cities")]
     public class City : BaseNumeric
     {
         [Required]

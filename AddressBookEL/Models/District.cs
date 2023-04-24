@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AddressBookEL.Models
 {
+    [Table("Districts")]
     public class District:BaseNumeric
     {
         [Required]

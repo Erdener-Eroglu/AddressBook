@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AddressBookEL.Models
 {
+    [Table("UserAddresses")]
     public class UserAddress : BaseNumeric
     {
         [Required]

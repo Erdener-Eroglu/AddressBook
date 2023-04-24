@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AddressBookEL.Models
 {
+    [Table("Neighbourhoods")]
     public class Neighbourhood : BaseNumeric
     {
         [Required]
