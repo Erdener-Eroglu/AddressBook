@@ -91,11 +91,17 @@ using (var scope = app.Services.CreateScope())
     //Resolve ASP .NET Core Identity with DI help
     var userManager = (UserManager<AppUser>?)scope.ServiceProvider.GetService(typeof(UserManager<AppUser>));
     var roleManager = (RoleManager<AppRole>?)scope.ServiceProvider.GetService(typeof(RoleManager<AppRole>));
+    var cityManager = (ICityManager?)scope.ServiceProvider.GetService(typeof(ICityManager));
+    var districtManager = (IDistrictManager?)scope.ServiceProvider.GetService(typeof(IDistrictManager));
+    var neighbourhoodManager = (INeighbourhoodManager?)scope.ServiceProvider.GetService(typeof(INeighbourhoodManager));
     // do you things here
 
     DataDefaultXihan d = new DataDefaultXihan();
 
     d.CheckAndCreateRoles(roleManager);
+    d.CreateAllCities(cityManager);
+    d.CreateAllDistricts(districtManager);
+    d.CreateSomeNeighbourhood(neighbourhoodManager,cityManager,districtManager);
 
 }
 
