@@ -116,8 +116,7 @@ namespace AddressBookPL.DefaultData
                             int cityId = Convert.ToInt32(item.Cell(2).Value.ToString().Trim()); //34
 
 
-                            if (districts.Count(x => x.Name.ToLower() == districtName.ToLower()
-                            && x.CityId == cityId) == 0)
+                            if (districts.Count(x => x.Name.ToLower() == districtName.ToLower() && x.CityId == cityId) == 0)
                             {
                                 DistrictVM d = new DistrictVM()
                                 {
@@ -137,8 +136,6 @@ namespace AddressBookPL.DefaultData
 
             }
         }
-
-
 
         public void CreateSomeNeighbourhood(INeighbourhoodManager neighbourhoodManager, ICityManager cityManager, IDistrictManager districtManager)
 
@@ -176,8 +173,6 @@ namespace AddressBookPL.DefaultData
                             var city = cityManager.GetByConditions(x => x.Name.ToLower() == cityName.ToLower()).Data;
 
                             var district = districtManager.GetByConditions(x => x.Name.ToLower() == districtName.ToLower() && x.CityId == city.Id).Data;
-
-
                             if (neighbours.Count(x => x.Name.ToLower() == neighbourName.ToLower() && x.DistrictId == district.Id) == 0)
                             {
                                 NeighbourhoodVM n = new() // c# bilmem kaçla gelmiş özellik
@@ -195,8 +190,6 @@ namespace AddressBookPL.DefaultData
 
                     } // foreach bitti
                 } // using bitti
-
-
             }
             catch (Exception)
             {
