@@ -1,5 +1,4 @@
-﻿using AddressBookBL.ImplementationOfManagers;
-using AddressBookBL.InterfacesOfManagers;
+﻿using AddressBookBL.InterfacesOfManagers;
 using AddressBookEL.IdentityModels;
 using AddressBookEL.ViewModels;
 using ClosedXML.Excel;
@@ -31,9 +30,6 @@ namespace AddressBookPL.DefaultData
                         var result = roleManager.CreateAsync(role).Result;
                     }
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -41,7 +37,6 @@ namespace AddressBookPL.DefaultData
                 // yazılımcıya acil başlıklı email gönderilebilir
             }
         }
-
 
         public void CreateAllCities(ICityManager cityManager)
         {
@@ -95,12 +90,7 @@ namespace AddressBookPL.DefaultData
                 //loglanacak
 
             }
-
-
-
         }
-
-
 
         public void CreateAllDistricts(IDistrictManager districtManager)
         {
@@ -138,16 +128,9 @@ namespace AddressBookPL.DefaultData
 
                                 districtManager.Add(d);
                             }
-
-
-
-
                         } // if bitt
-
                     } // foreach bitti
                 } // using bitti
-
-
             }
             catch (Exception)
             {
