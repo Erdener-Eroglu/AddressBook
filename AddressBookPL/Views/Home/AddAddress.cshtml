@@ -212,7 +212,7 @@
 
                 $("#addresstitle").val('');
                 $("#addressdetail").val('');
-                $('#checkbox1').prop('checked',false);
+                $('#checkbox1').prop('checked', false);
                 $("#cityselect").val(0).trigger('change'); // trigger ile change eventı tetiklendi
 
             }); // btnClear bitti
@@ -232,8 +232,7 @@
                         NeighbourhoodId: neighbourid
                     };
                     //IsDefaultAddress
-                    if($('#checkbox1').is(':checked'))
-                    {
+                    if ($('#checkbox1').is(':checked')) {
                         address.isDefaultAddress = true;
                     }
 
@@ -252,6 +251,7 @@
                                 // TEMİZLİK
                                 $("#addresstitle").val('');
                                 $("#addressdetail").val('');
+                                $('#checkbox1').prop('checked', false);
                                 $("#cityselect").val(0).trigger('change'); // trigger ile change eventı tetiklendi
 
                             } else {
