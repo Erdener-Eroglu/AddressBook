@@ -8,7 +8,7 @@ namespace AddressBookBL.ImplementationOfManagers
 {
     public class DistrictManager : Manager<DistrictVM,District,int>, IDistrictManager
     {
-        public DistrictManager(IDistrictRepo repo, IMapper mapper) : base(repo, mapper, null)
+        public DistrictManager(IDistrictRepo repo, IMapper mapper) : base(repo, mapper, "City")
         {
 
         }
